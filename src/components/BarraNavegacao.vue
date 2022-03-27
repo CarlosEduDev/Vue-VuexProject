@@ -20,15 +20,13 @@
 </template>
 
 <script>
-
-
     import BarraNavegacaoLogado from '@/components/BarraNavegacaoLogado'
     import BarraNavegacaoDeslogado from '@/components/BarraNavegacaoDeslogado'
 
     export default {
     computed:{
         usuarioestaLogado(){
-        return Boolean(localStorage.getItem('token'));
+        return Boolean(this.$store.state.token);
         }
     },
     components:{
